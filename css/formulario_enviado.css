@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    body {
+        background-color: #0b0c10; /* Fondo general ultra oscuro */
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        /* Contenedor del Logo */
+        .logo-contenedor {
+            .logo-img {
+                border-radius: 50%;
+                border: 1px solid #ffc107;
+                width: 100px;
+                box-shadow: 0 0 15px rgba(255, 193, 7, 0.4);
+            }
+        }
+
+        /* Títulos */
+        .titulo-exito {
+            color: #ffc107;
+            text-shadow: 0px 4px 10px rgba(255, 193, 7, 0.2);
+        }
+
+        .subtitulo-exito {
+            color: #a0a5b5;
+        }
+
+        .pase-digital {
+            background: linear-gradient(135deg, #12141c 0%, #1a1d24 100%);
+            border: 2px dashed #ffc107;
+            border-radius: 12px;
+            max-width: 400px;
+            margin: 30px auto;
+            position: relative;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background-color: #0b0c10;
+                border-radius: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &::before { left: -10px; }
+            &::after { right: -10px; }
+
+            .marca-agua {
+                position: absolute;
+                right: -20px;
+                bottom: -20px;
+                font-size: 7rem;
+                color: rgba(255, 193, 7, 0.03);
+                font-weight: 900;
+                user-select: none;
+                transform: rotate(-15deg);
+                z-index: 1;
+            }
+
+            .pase-header, div {
+                position: relative;
+                z-index: 2;
+            }
+        }
+
+        .texto-auxiliar {
+            max-width: 450px;
+            color: #6c757d !important;
+        }
+
+        .btn-saqqara {
+            display: inline-block;
+            background-color: #ffc107;
+            color: #000000;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            border: none;
+
+            &:hover {
+                background-color: #e0a800;
+                transform: translateY(-2px);
+                box-shadow: 0px 5px 15px rgba(255, 193, 7, 0.3);
+            }
+        }
+    }
+}

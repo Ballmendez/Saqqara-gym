@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    body {
+        background-color: rgb(31, 31, 31);
+
+        .entrada {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1vw;
+            margin-top: 5vw;
+        }
+
+        h1 {
+            color: rgb(241, 195, 45);
+            margin-top: 3vw;
+            text-align: center;
+        }
+
+        h2 {
+            color: rgb(241, 195, 45);
+            text-align: center;
+            margin-bottom: 1vw;
+            margin-top: 1vw;
+        }
+
+        p {
+            color: white;
+            text-align: center;
+            margin-bottom: 1vw;
+        }
+
+        .clases {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            margin: 50px 0;
+        }
+
+        .contenido-clases {
+            text-align: center;
+
+            h2 {
+                color: #ffc107;
+                font-size: 3rem;
+                margin-bottom: 20px;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                color: white;
+                font-size: 1.4rem;
+                line-height: 2;
+            }
+
+            .imgagen-gym {
+                width: 350px;
+                height: 250px;
+                object-fit: cover;
+                border-radius: 15px;
+            }
+        }
+
+        .contacto {
+            background-color: rgb(236, 204, 22);
+            padding: 1vw;
+
+            h2 {
+                color: black;
+                font-size: 2rem;
+                margin-bottom: 1vw;
+            }
+
+            p {
+                color: black;
+                font-size: 1.2rem;
+                margin: 0.5vw;
+            }
+        }
+
+        footer {
+            background-color: rgb(109, 109, 109);
+            color: white;
+            text-align: center;
+            padding: 0vw;
+
+            p {
+                margin: 0.5vw;
+            }
+        }
+    }
+}

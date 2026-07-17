@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "titulo": "Musculación",
+        "imagen": "../assets/musculacion.jpg",
+        "descripcion": "Entrenamiento con acceso al gimnasio 3 veces por semana.",
+        "beneficios": [
+            "Rutinas personalizadas",
+            "Profesores capacitados",
+            "Tres clases a la semana"
+        ],
+        "precio": 40000
+    },
+    {
+        "id": 2,
+        "titulo": "Clases Libres",
+        "imagen": "../assets/libre.jpg",
+        "descripcion": "Acceso libre a todas las clases del gimnasio.",
+        "beneficios": [
+            "Todos los beneficios de musculación",
+            "Sin límite de clases",
+            "Beneficios exclusivos"
+        ],
+        "precio": 47000
+    },
+    {
+        "id": 3,
+        "titulo": "Indoor Bike",
+        "imagen": "../assets/indoorbike.jpg",
+        "descripcion": "Clases grupales de ciclismo con música y alta intensidad.",
+        "beneficios": [
+            "Quema calorías",
+            "Mejora la resistencia",
+            "Todos los niveles"
+        ],
+        "precio": 28000
+    },
+    {
+        "id": 4,
+        "titulo": "Entrenamiento Funcional",
+        "imagen": "../assets/funcional.jpg",
+        "descripcion": "Circuitos de fuerza, coordinación y resistencia.",
+        "beneficios": [
+            "Circuitos dinámicos",
+            "Trabajo en equipo",
+            "Alta intensidad"
+        ],
+        "precio": 30000
+    }
+]
