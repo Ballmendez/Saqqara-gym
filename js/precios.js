@@ -124,19 +124,17 @@ function mostrarActividades(actividades) {
                 title: `¿Querés suscribirte a ${actividad.titulo}?`,
                 text: "Se añadirá a tu carrito de inscripción.",
                 icon: "question",
+                iconColor: "#ffc107",
+                background: "#12141c",
+                color: "#ffffff",
                 showCancelButton: true,
+                confirmButtonColor: "#ffc107",
                 confirmButtonText: "Agregar al carrito",
-                cancelButtonText: "Cancelar"
+                cancelButtonText: "Cancelar",
+                customClass: { popup: "border border-warning rounded-3" }
             }).then((result) => {
                 if (result.isConfirmed) {
                     agregarAlCarrito(actividad);
-                    Swal.fire({
-                        title: "¡Agregado!",
-                        text: `${actividad.titulo} se sumó al carrito.`,
-                        icon: "success",
-                        timer: 1500,
-                        showConfirmButton: false
-                    });
                 }
             });
         });
@@ -153,9 +151,36 @@ function mostrarActividades(actividades) {
 }
 
 function agregarAlCarrito(actividad) {
+    const existe = carritoProductos.some((item) => item.id === actividad.id);
+
+    if (existe) {
+        Swal.fire({
+            icon: "info",
+            title: "Ya seleccionada",
+            text: `Ya agregaste "${actividad.titulo}" a tu carrito.`,
+            background: "#12141c",
+            color: "#ffffff",
+            confirmButtonColor: "#ffc107",
+            customClass: { popup: "border border-warning rounded-3" }
+        });
+        return;
+    }
+
     carritoProductos.push(actividad);
     actualizarLocalStorage();
     renderCarrito();
+
+    Swal.fire({
+        title: "¡Agregado!",
+        text: `${actividad.titulo} se sumó al carrito.`,
+        icon: "success",
+        iconColor: "#ffc107",
+        background: "#12141c",
+        color: "#ffffff",
+        timer: 1500,
+        showConfirmButton: false,
+        customClass: { popup: "border border-warning rounded-3" }
+    });
 }
 
 function eliminarProducto(index) {
@@ -176,7 +201,6 @@ function renderCarrito() {
 
     carritoProductos.forEach((actividad, index) => {
         const li = D.createElement("li");
-        // Quitamos bg-secondary, text-white y border-light. Dejamos el control al CSS personalizado.
         li.className = "list-group-item d-flex justify-content-between align-items-center carrito-item";
         li.innerHTML = `
             <div>
@@ -215,9 +239,14 @@ if (btnCarrito && carrito) {
             title: "¿Vaciar carrito?",
             text: "Se quitarán todas las actividades seleccionadas.",
             icon: "warning",
+            iconColor: "#ffc107",
+            background: "#12141c",
+            color: "#ffffff",
             showCancelButton: true,
+            confirmButtonColor: "#ffc107",
             confirmButtonText: "Sí, vaciar",
-            cancelButtonText: "Cancelar"
+            cancelButtonText: "Cancelar",
+            customClass: { popup: "border border-warning rounded-3" }
         }).then((result) => {
             if (result.isConfirmed) {
                 carritoProductos = [];
@@ -232,7 +261,11 @@ if (btnCarrito && carrito) {
             Swal.fire({
                 icon: "error",
                 title: "Carrito vacío",
-                text: "Selecciona al menos una actividad para continuar."
+                text: "Selecciona al menos una actividad para continuar.",
+                background: "#12141c",
+                color: "#ffffff",
+                confirmButtonColor: "#ffc107",
+                customClass: { popup: "border border-warning rounded-3" }
             });
             return;
         }

@@ -82,20 +82,16 @@ html {
                 cursor: pointer;
                 transition: all 0.2s ease-in-out;
 
-                /* Botón principal (Enviar formulario) */
                 &[type="submit"] {
                     background-color: #ffc107;
-                    /* Amarillo */
                     color: black;
 
                     &:hover {
                         background-color: #e0a800;
-                        /* Amarillo más oscuro */
                         transform: translateY(-1px);
                     }
                 }
 
-                /* Botón de Limpiar */
                 &[type="reset"] {
                     background-color: transparent;
                     border: 1px solid #6c757d;
